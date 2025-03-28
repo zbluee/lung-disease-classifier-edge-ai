@@ -136,7 +136,7 @@ public class MainActivity extends AppCompatActivity {
 
             if (photoFile != null) {
                 currentPhotoUri = FileProvider.getUriForFile(this,
-                        "com.example.lungclassifier.fileprovider",
+                        "com.example.lungdiseaseclassifier.fileprovider",
                         photoFile);
                 takePictureIntent.putExtra(MediaStore.EXTRA_OUTPUT, currentPhotoUri);
                 startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE);

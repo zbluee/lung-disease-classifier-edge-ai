@@ -40,9 +40,6 @@ dependencies {
     // TensorFlow Lite
     implementation 'org.tensorflow:tensorflow-lite:2.10.0'
     implementation 'org.tensorflow:tensorflow-lite-support:0.4.2'
-    implementation 'org.tensorflow:tensorflow-lite-metadata:0.4.2'
-    implementation 'org.tensorflow:tensorflow-lite-gpu:2.10.0'
-
     // For camera and image handling
     implementation 'androidx.camera:camera-camera2:1.2.1'
     implementation 'androidx.camera:camera-lifecycle:1.2.1'
