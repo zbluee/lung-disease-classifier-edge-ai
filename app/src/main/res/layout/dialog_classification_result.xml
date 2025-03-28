@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@drawable/dialog_background">
+
+    <!-- Header with Title and Close Button -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Classification Result"
+            android:textStyle="bold"
+            android:textSize="22sp"
+            android:textColor="#212121"
+            android:gravity="center"/>
+
+    </RelativeLayout>
+
+    <!-- Diagnosis Result -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="4dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Diagnosis"
+                android:textSize="18sp"
+                android:textColor="#424242"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/diagnosisTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Normal"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:textColor="#0277BD"
+                android:layout_marginTop="8dp"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Class Probabilities Title -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Class Probabilities"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:textColor="#424242"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Normal Class -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="4dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Normal"
+                android:textColor="#212121"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/normalValueTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="95.5%"
+                android:textColor="#212121"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/normalProgressBar"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="16dp"
+            android:progressTint="#4CAF50"
+            android:progressBackgroundTint="#E0E0E0"
+            android:progress="95"/>
+    </LinearLayout>
+
+    <!-- Viral Pneumonia Class -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="4dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Viral Pneumonia"
+                android:textColor="#212121"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/pneumoniaValueTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4.5%"
+                android:textColor="#212121"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/pneumoniaProgressBar"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="16dp"
+            android:progressTint="#FF5722"
+            android:progressBackgroundTint="#E0E0E0"
+            android:progress="5"/>
+    </LinearLayout>
+
+    <!-- Confidence Note -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Model accuracy: 97.3%"
+        android:textStyle="italic"
+        android:textSize="14sp"
+        android:textColor="#616161"
+        android:layout_marginBottom="20dp"/>
+
+    <!-- Close Button -->
+    <Button
+        android:id="@+id/closeButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Close"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#3F51B5"
+        android:padding="12dp"
+        android:textSize="16sp"
+        android:elevation="4dp"
+        android:background="@drawable/round_button_background"/>
+</LinearLayout>
